@@ -12,7 +12,7 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-      item = req.params["GET"]
+      item = req.params["item"]
       resp.write handle_add(item)
     elsif req.path.match(/search/)
       search_term = req.params["q"]
